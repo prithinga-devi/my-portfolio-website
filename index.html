@@ -1,171 +1,224 @@
 <!DOCTYPE html>
-<html>
- <head>
-     <link rel="stylesheet" href="index.css">
-     <title>my portfolio website</title>
-     <link rel="icon" href="Data.jpeg">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prithinga Devi | Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<header class="nav">
-   <!-- <a href="#" class="num">MY PORTFOLIO</a> -->
-  <a href="index.html" id="logo">
-  <i class="fa fa-user-circle"></i> MyPortfolio
-</a>
-  <input type="checkbox" id="check">
-  <label for="check" class="icons">
-    <i class='bx bx-menu' id="menu-icon"></i>
-    <i class='bx bx-x' id="close-icon"></i>
-  </label>
-  <nav class="navbar">
-  <a href="#homepage"  style="--i:0;">Home</a>
-  <a href="#aboutPage" style="--i:1;">ABOUT</a>
-  <a href="#skillsPage"style="--i:2;">SKILLS</a>
-  <a href="#projectpage"style="--i:3;">PROJECT</a>
-  <a href="#contactPage"style="--i:4;">CONTACT</a>
-  </nav>
-</header><br><br>
 
-<div class="home" id="homepage">
-  <div class="home-img" alt="">
-  <img src="images (1).jpeg" alt="">
-  </div>
-  <div class="home-context"><br><br><br><br><br><br>
-    <h1>I'm PRITHINGA DEVI</h1>
-    <h2>FULL STACK DEVELOPER</h2>
-    <h2>WEB DEVELOPER</h2>
-    <div class="social-icon">
-      <a href="https://www.linkedin.com/in/prithinga-devi-5049b231b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin'></i></a>
-      <a href="https://github.com/prithinga-devi"><i class='bx bxl-github'></i></a>
-      <a href="https://mail.google.com/mail/mu/mp/199/#tl/priority/%5Esmartlabel_personal"><i class='bx bxs-envelope'></i></a>
+<body class="atlas-theme">
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="bracket-top-left"></span>
+        <h1>Prithinga</h1>
+        <span class="bracket-bottom-right"></span>
       </div>
-    <a href="#contactPage" class="btn">contact</a><br><br><br>
-    <a href="#resumepage" class="btn">resume</a>
-  </div>
-  </div><br>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#home" class="nav-item active"><ion-icon name="home-outline"></ion-icon> <span>Home</span></a>
+      <a href="#about" class="nav-item"><ion-icon name="person-outline"></ion-icon> <span>About</span></a>
+      <a href="#skills" class="nav-item"><ion-icon name="list-outline"></ion-icon> <span>Skills</span></a>
+      <a href="#projects" class="nav-item"><ion-icon name="briefcase-outline"></ion-icon> <span>Portfolio</span></a>
+      <a href="#contact" class="nav-item"><ion-icon name="chatbubbles-outline"></ion-icon> <span>Contact</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="theme-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">
+        <ion-icon name="moon-outline" id="theme-icon"></ion-icon>
+      </button>
+    </div>
+  </aside>
 
-<div class="about" id="aboutPage">
-<div class="about-image">
-  <img src="main.png" alt="">
-</div>
-<div class="about-content">
-<h1 style="text-align: center;">ABOUT ME</h1><b><br>
-<p class="capabilities">Hi, I'm Prithinga devi, a passionate software developer currently pursuing a BCA at Madras University. I have a strong interest in web development, with a focus on designing visually appealing and seamless websites to deliver an exceptional user experience. I enjoy creating websites and web applications that not only solve problems but also help individuals and businesses present themselves in a professional light.At present, I'm expanding my expertise in website development, specifically diving deeper into frameworks like React. Along the way, I've gained valuable insights into website functionality and user-centric design.My technical skill set includes Python, SQL,React, HTML, CSS, JavaScript, and Java, and I'm always eager to explore new technologies to enhance my problem-solving capabilities.I firmly believe in the power of self-development and continuous learning, which I strive to apply in both my academic journey and as a developer.Let’s connect! Feel free to reach out to me on [LinkedIn/GitHub/Email].</p>
-</div>
-</div>
+  <!-- Main Content Area -->
+  <main class="main-content">
 
+    <!-- Hero Section -->
+    <section id="home" class="hero-section full-viewport">
+      <div class="hero-container container">
+        <div class="hero-text">
+          <h3 class="hero-greeting">Hello, my name is <span class="highlight-name">Prithinga</span></h3>
+          <h1 class="hero-main-title">I'm a <span id="typing-text" class="accent-text"></span><span
+              class="cursor">|</span></h1>
+          <p class="hero-bio-short">
+            A results-driven developer currently pursuing a BCA at Tagore College of Arts and Science.
+            I specialize in building scalable web applications with a focus on seamless user experience
+            and robust architectural design.
+          </p>
+          <div class="hero-cta">
+            <a href="#about" class="btn btn-orange">More About Me</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="profile-image-wrapper">
+            <span class="corner-bracket top-left"></span>
+            <span class="corner-bracket bottom-right"></span>
+            <img src="main.png" alt="Prithinga Devi" class="profile-img">
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="inner" id="skillsPage">
-<div class="header">
-  <h1> MY SKILLS</h1>
-</div>
-<div class="skills">
-<div class="skill-box">
-<div class="skill-title">
-<div class="img">
-<img src="Html.png" alt="" class="skill-icon">
-</div>
-<h3>HTML 5</h3>
-</div>
-<p style="color:rgb(240, 223, 223); ">I have a solid grasp of HTML, which allows me to structure content effectively on the web. I am familiar with semantic HTML, ensuring accessibility and proper content organization. I can create forms, links, and tables, as well as integrate multimedia elements. My experience has helped me build the foundational structure of many websites.</p>
-</div>
-<div class="skill-box">
-<div class="skill-title">
-<div class="img">
-<img src="Css.png" alt="" class="skill-icon">
-</div>
-<h3>CSS</h3>
-</div>
-<p style="color:rgb(225, 219, 219);">With CSS, I can style web pages, applying layouts, colors, fonts, and spacing. I am comfortable using both basic and advanced selectors, including classes and IDs. I’ve worked with responsive design, ensuring websites are mobile-friendly. Additionally, I have experience with flexbox and grid systems for more complex layouts.</p>
-</div>
-<div class="skill-box">
-<div class="skill-title">
-<div class="img">
-<img src="Js.png" alt="" class="skill-icon">
-</div>
-<h3>JAVASCRIPT</h3>
-</div>
-<p style="color:rgb(242, 233, 233);">
-In JavaScript, I am capable of writing interactive and dynamic functionality for websites. I understand core concepts like variables, functions, and loops. My experience includes DOM manipulation, handling events. I can implement simple web applications and enhance user experience with JavaScript.</p>
-</div>
-<div class="skill-box">
-<div class="skill-title">
-<div class="img">
-<img src="C.png" alt="" class="skill-icon">
-</div>
-<h3>C++</h3>
-</div>
-<p style="color:rgb(225, 213, 213);">In C++, I am familiar with object-oriented programming concepts such as classes and inheritance. I understand basic syntax, control flow, and data types. I can implement simple algorithms and solve problems using arrays and loops. My experience is still growing, but I am comfortable with fundamental C++ principles.</p>
-</div>
-<div class="skill-box">
-<div class="skill-title">
-<div class="img">
-<img src="Java.png" alt="" class="skill-icon">
-</div>
-<h3>JAVA</h3>
-</div>
-<p style="color:rgb(218, 208, 208);">With Java, I understand object-oriented concepts like inheritance, polymorphism, and encapsulation. I can write basic programs using classes, methods, and control structures. 
-I am also familiar with Java’s exception handling and its extensive standard libraries. My focus is on building the core foundation to advance my Java skills further.</p>
-</div>
-<div class="skill-box">
-<div class="skill-title">
-<div class="img">
-<img src="Python.png" alt="" class="skill-icon">
-</div>
-<h3>PYTHON</h3>
-</div>
-<p style="color:rgb(234, 218, 218)">I have a foundational understanding of Python, using it for basic scripting . I am familiar with data structures like lists, dictionaries, and tuples, and can implement basic algorithms. I’ve worked with functions, control flow, and file I/O. My experience has also included working with libraries like math and datetime.</p>
-</div>
-</div>
+    <!-- About Section -->
+    <section id="about" class="about-section section reveal">
+      <div class="container container-content">
+        <h2 class="section-heading">About Me</h2>
+        <div class="about-content-grid">
+          <div class="about-description">
+            <p>
+              Hi, I’m a passionate software developer currently pursuing a Bachelor of Computer Applications at
+              <strong>Tagore College of Arts and Science</strong>. I have a strong interest in web development, with a
+              focus on creating visually appealing,
+              seamless, and user-friendly websites that deliver meaningful digital experiences.
+            </p>
+            <p>
+              I enjoy building web applications that solve real-world problems while helping
+              businesses present themselves professionally. Currently, I’m expanding my
+              expertise in modern frameworks like <strong>React</strong>, while deepening my
+              understanding of user-centric design.
+            </p>
+            <p class="sub-text">
+              My technical skill set includes Python, SQL, React, HTML, CSS, JavaScript, and Java.
+              I strongly believe in the power of continuous learning and self-development.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <h3>Education</h3>
+              <p>BCA - Tagore College of Arts and Science (CGPA: 8.0)</p>
+            </div>
+            <div class="stat-card">
+              <h3>Focus</h3>
+              <p>Full Stack Optimization</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section reveal">
+      <div class="container container-content">
+        <h2 class="section-heading">Technical Expertise</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-icon"><img src="Html.png" alt="HTML 5" style="width: 50px;"></div>
+            <h4>HTML 5</h4>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><img src="Css.png" alt="CSS 3" style="width: 50px;"></div>
+            <h4>CSS 3</h4>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><img src="Js.png" alt="Javascript" style="width: 50px;"></div>
+            <h4>Javascript</h4>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><img src="bootstrap.png" alt="Bootstrap" style="width: 50px;"></div>
+            <h4>Bootstrap</h4>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><img src="Python.png" alt="Python" style="width: 50px;"></div>
+            <h4>Python</h4>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><img src="Js.png" alt="MySQL" style="width: 50px; filter: hue-rotate(180deg);">
+            </div>
+            <h4>MySQL</h4>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="card-container" id="projectpage">
-<div class="card">
-<img src="project_1.png" alt="">
-<div class="card-content">
-<h3>project 1</h3>
-<p> EduVerse is a dynamic and responsive landing page crafted for an online learning platform that empowers users to explore new skills from anywhere in the world. The design features a welcoming hero section with a personalized greeting and a bold call-to-action button that invites users to dive into curated courses. Navigation is intuitive, with clear links to essential sections like Home, Courses, About, and Contact.The "Popular Courses" section showcases key learning paths—Web Development, Python Programming, and UI/UX Design—each represented with vibrant visuals and thematic icons to spark interest. Built using HTML, CSS, and Bootstrap, EduVerse ensures seamless performance across devices and integrates subtle animations for a modern, engaging user experience.</p>
-</div>
-</div>
-<div class="card">
-<img src="project_2.png" alt="">
-<div class="card-content">
-<h3>project 2</h3>
-<p> Nexcent is a responsive and visually engaging landing page designed to support creativeprofessionals—especially photographers—in scaling their business. The layout features a clean navigation bar with links to essential sections like Home, Service, Feature, Product, Testimonial, and FAQ, along with Login and Signup buttons for user access.The hero section delivers a compelling message: “Lessons and insights from 8 years” and poses a strategic question about growth through websites versus social media. A bold green call-to-action button encourages users to take the next step. The accompanying illustration reinforces the theme of digital strategy, showcasing a character interacting with flowcharts and code on a large screen.Built using HTML, CSS, and Bootstrap, the page is optimized for all devices and includes modern design elements that reflect professionalism, clarity, and user-first thinking.</p>
-</div>
-</div>
-<div class="card">
-<img src="project_3.png" alt="">
-<div class="card-content">
-<h3>project 3</h3>
-<p>DogConnect is a vibrant and playful mobile app landing page designed to help dog lovers discover and connect with nearby pups. The layout features a colorful gradient background and a bold headline that invites users to explore canine companionship in their area. Prominent download buttons for both iOS and Android platforms make it easy for users to get started.The right side of the page showcases the app interface on a smartphone, resembling a dating-style experience where users can view dog profiles and interact using familiar swipe actions. This creative twist on social discovery makes the app both fun and intuitive, blending pet adoption with modern UX trends.Built with responsive design principles, DogConnect ensures a seamless experience across devices while maintaining a cheerful and engaging aesthetic that appeals to animal lovers of all ages.</p>
-</div>
-</div>
-</div><br><br>
+    <!-- Portfolio Section -->
+    <section id="projects" class="portfolio-section section reveal">
+      <div class="container container-content">
+        <h2 class="section-heading">Featured Projects</h2>
+        <div class="portfolio-grid">
+          <!-- Project cards were updated in previous steps to match user requests -->
+          <div class="project-card-atlas">
+            <img src="DigitalPlanter.png" alt="Digital Planter">
+            <div class="project-overlay">
+              <h5>Digital Planter</h5>
+              <p>Interactive Botanical Tool</p>
+            </div>
+          </div>
+          <div class="project-card-atlas">
+            <img src="SimonGame.png" alt="Simon Game">
+            <div class="project-overlay">
+              <h5>Simon Memory</h5>
+              <p>Logic-based Game Dev</p>
+            </div>
+          </div>
+          <div class="project-card-atlas">
+            <img src="quiz.png" alt="Quiz App">
+            <div class="project-overlay">
+              <h5>Quiz Master</h5>
+              <p>Educational Platform</p>
+            </div>
+          </div>
+          <div class="project-card-atlas">
+            <img src="project_1.png" alt="Project 1">
+            <div class="project-overlay">
+              <h5>UI Vision</h5>
+              <p>UX Design Study</p>
+            </div>
+          </div>
+          <div class="project-card-atlas">
+            <img src="project_2.png" alt="Project 2">
+            <div class="project-overlay">
+              <h5>Expense Flow</h5>
+              <p>Financial Visualization</p>
+            </div>
+          </div>
+          <div class="project-card-atlas">
+            <img src="project_3.png" alt="Project 3">
+            <div class="project-overlay">
+              <h5>Scalable Arch</h5>
+              <p>System Architecture</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section reveal">
+      <div class="container container-content text-center">
+        <h2 class="section-heading">Connect</h2>
+        <div class="contact-actions">
+          <a href="mailto:prithinga.devi@gmail.com" class="btn btn-orange btn-large">Send Email</a>
+          <div class="social-links-atlas">
+            <a href="https://github.com/prithinga-devi" target="_blank"
+              style="color: #a0a0a0 !important; font-size: 2.2rem;"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/prithinga-devi-5049b231b" target="_blank"
+              style="color: #a0a0a0 !important; font-size: 2.2rem;"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="contact" id="contactPage">
-  <h1>CONTACT</h1><br>
-  <form action="/action_page.php" novalidate>
-    <p>Name*</p>
-    <input type="text" id="name" name="name" placeholder="Name..." required><br>
+    <footer class="atlas-footer">
+      <p>&copy; 2025 Prithinga Devi. All rights reserved.</p>
+    </footer>
 
-    <p>Email ID*</p>
-    <input type="email" id="email" name="email" placeholder="Email ID..." required><br>
+  </main>
 
-    <p>Feedback*</p>
-    <input type="text" id="feedback" name="feedback" placeholder="Feedback..." required><br>
-
-    <p>Phone Number*</p>
-    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="xxxxxxxxxx" required><br>
-
-    <input type="submit" value="Submit">
-  </form>
-</div>
-<hr>
-
-
+  <script src="script.js"></script>
 </body>
+
 </html>
