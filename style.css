@@ -399,6 +399,80 @@ body {
     font-size: 1rem;
 }
 
+/* Education Timeline Styling */
+.education-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 30px;
+    border-left: 1px solid var(--border);
+}
+
+.education-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.education-item::before {
+    content: '';
+    position: absolute;
+    left: -35px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: var(--accent-orange);
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(255, 94, 20, 0.1);
+}
+
+.education-content {
+    background: var(--bg-sidebar);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    transition: var(--transition-smooth);
+}
+
+.education-content:hover {
+    border-color: var(--accent-orange);
+    transform: translateY(-5px);
+}
+
+.education-year {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(255, 94, 20, 0.1);
+    color: var(--accent-orange);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.education-content h3 {
+    font-size: 1.4rem;
+    color: var(--text-pure);
+    margin-bottom: 8px;
+}
+
+.institution {
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.score {
+    color: var(--accent-orange);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.education-content .description {
+    color: var(--text-dim);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
 /* Skills Grid */
 .skills-grid {
     display: grid;
