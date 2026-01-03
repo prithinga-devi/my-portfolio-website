@@ -60,6 +60,7 @@ window.addEventListener('scroll', () => {
         }
     });
 
+    const navItems = document.querySelectorAll('.nav-item, .mobile-nav-item');
     navItems.forEach(item => {
         item.classList.remove('active');
         if (item.getAttribute('href').includes(current)) {
