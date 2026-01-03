@@ -72,7 +72,61 @@ window.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(type, 1000);
     initTheme();
+    initProjectInteractivity();
 });
+
+// Creative Project Card Interactivity (Spotlight & 3D Tilt)
+function initProjectInteractivity() {
+    const cards = document.querySelectorAll('.project-card-atlas, .hero-glass-card, .education-image-wrapper');
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (isTouchDevice) return; // Disable heavy effects for touch devices
+
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Update Spotlight Position
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+
+            // Calculate 3D Tilt
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = (centerY - y) / 10; // Adjust for intensity
+            const rotateY = (x - centerX) / 10;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+        });
+
+        // Parallax Effect for Tech Badges
+        const badges = card.querySelectorAll('.badge');
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const xPercent = (e.clientX - rect.left) / rect.width - 0.5;
+            const yPercent = (e.clientY - rect.top) / rect.height - 0.5;
+
+            badges.forEach((badge, index) => {
+                const depth = (index + 1) * 20;
+                const moveX = xPercent * depth;
+                const moveY = yPercent * depth;
+                badge.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.1)`;
+            });
+        });
+
+        card.addEventListener('mouseleave', () => {
+            badges.forEach(badge => {
+                badge.style.transform = `translate(0, 0) scale(1)`;
+            });
+        });
+    });
+}
 
 // Theme Management
 const themeToggle = document.getElementById('theme-toggle');
